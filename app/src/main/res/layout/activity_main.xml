@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
     //첫 번째 열
-
     <LinearLayout
         android:layout_width="345dp"
         android:layout_height="match_parent"
@@ -39,7 +38,6 @@
     </LinearLayout>
 
     //2345열
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,7 +45,6 @@
         android:weightSum="5">
 
         //작은버튼 전체 레이아웃
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -70,21 +67,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_shape"
+                    android:background="@drawable/btn_shape"/>
 
                 <ImageButton
                     android:id="@+id/grind"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/grind"
+                    android:background="@drawable/btn_shape"/>
 
                 <ImageButton
                     android:id="@+id/windy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/windy"
+                    android:background="@drawable/btn_shape"/>
 
             </LinearLayout>
 
@@ -103,21 +109,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/close"
+                    android:background="@drawable/btn_shape"/>
 
                 <ImageButton
                     android:id="@+id/taptap"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/taptap"
+                    android:background="@drawable/btn_shape"/>
 
                 <ImageButton
                     android:id="@+id/suction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/suction"
+                    android:background="@drawable/btn_shape"/>
             </LinearLayout>
 
             //네 번째 열
@@ -135,25 +150,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/bitedown"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape" />
 
                 <ImageButton
                     android:id="@+id/left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/left"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape"/>
 
                 <ImageButton
                     android:id="@+id/anesthesia"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/anesthesia"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape" />
             </LinearLayout>
 
             //다섯번째 열
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -167,26 +190,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/rinse"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape" />
 
                 <ImageButton
                     android:id="@+id/right"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/right"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape" />
 
                 <ImageButton
                     android:id="@+id/handpiece"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/handpiece"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape" />
             </LinearLayout>
+
         </LinearLayout>
 
-        //큰 버튼
-
+        //큰 버튼 전체
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -210,7 +242,10 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:text="1"
+                    android:src="@drawable/lefthand"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape"/>
 
                 <ImageButton
                     android:id="@+id/voice"
@@ -219,7 +254,10 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:text="1"
+                    android:src="@drawable/voice"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape"/>
 
             </LinearLayout>
 
@@ -237,7 +275,10 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:text="1"
+                    android:src="@drawable/laydown"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape"/>
 
                 <ImageButton
                     android:id="@+id/raise"
@@ -245,7 +286,10 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:text="1" />
+                    android:text="1"
+                    android:src="@drawable/raise"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/btn_shape"/>
 
             </LinearLayout>
         </LinearLayout>
