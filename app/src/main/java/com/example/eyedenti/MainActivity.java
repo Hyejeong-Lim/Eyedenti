@@ -20,7 +20,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
-    VideoView vv;
+    VideoView vrscreen;
     ImageButton closeBtn;
     ImageButton openBtn;
     ImageButton aneBtn;
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
+        
+        /* ActionBar 없애는 코드 */
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
@@ -43,32 +43,22 @@ public class MainActivity extends AppCompatActivity {
         aneBtn = (ImageButton)findViewById(R.id.anesthesia);
         handBtn = (ImageButton)findViewById(R.id.handpiece);
         sucBtn = (ImageButton)findViewById(R.id.suction);
-
-        vv= findViewById(R.id.vrscreen);
-        //Video Uri
-        Uri videoUri= Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4");
+        vrscreen = (VideoView) findViewById(R.id.vrscreen);
 
         closeBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
-
-
                Uri videoUri = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.close);
-                //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-//        vv.setMediaController(new MediaController(this));
 
-                //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
-                vv.setVideoURI(videoUri);
+                /* VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기 */
+                vrscreen.setVideoURI(videoUri);
 
-                //동영상을 읽어오는데 시간이 걸리므로..
-                //비디오 로딩 준비가 끝났을 때 실행하도록..
-                //리스너 설정
-                vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                /*비디오 로딩 준비가 끝났을 때 실행하도록 리스너 설정 */
+                vrscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mediaPlayer) {
                         //비디오 시작
-                        vv.start();
+                        vrscreen.start();
                     }
                 });
                 closeBtn.setImageResource(R.drawable.close_c);
@@ -77,24 +67,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         sucBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Uri videoUri = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.suction);
-                //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-//        vv.setMediaController(new MediaController(this));
 
-                //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
-                vv.setVideoURI(videoUri);
+                vrscreen.setVideoURI(videoUri);
 
-                //동영상을 읽어오는데 시간이 걸리므로..
-                //비디오 로딩 준비가 끝났을 때 실행하도록..
-                //리스너 설정
-                vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                vrscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mediaPlayer) {
-                        //비디오 시작
-                        vv.start();
+                        vrscreen.start();
                     }
                 });
                 sucBtn.setImageResource(R.drawable.suction_c);
@@ -106,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         sucBtn.setImageResource(R.drawable.suction);
                     }
-                }, 1500);// 딜레이 시간 설정. (1초 = 1000)
+                }, 1500);  // 딜레이 시간 설정 (1초 = 1000)
 
             }
         });
@@ -116,107 +98,66 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Uri videoUri = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.anesthesia);
-                //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-//        vv.setMediaController(new MediaController(this));
 
-                //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
-                vv.setVideoURI(videoUri);
+                vrscreen.setVideoURI(videoUri);
 
-                //동영상을 읽어오는데 시간이 걸리므로..
-                //비디오 로딩 준비가 끝났을 때 실행하도록..
-                //리스너 설정
-                vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                vrscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mediaPlayer) {
-                        //비디오 시작
-                        vv.start();
+
+                        vrscreen.start();
                     }
                 });
             }
         });
 
-
         handBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Uri videoUri = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.handpiece);
-                //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-//        vv.setMediaController(new MediaController(this));
 
-                //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
-                vv.setVideoURI(videoUri);
+                vrscreen.setVideoURI(videoUri);
 
-                //동영상을 읽어오는데 시간이 걸리므로..
-                //비디오 로딩 준비가 끝났을 때 실행하도록..
-                //리스너 설정
-                vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                vrscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mediaPlayer) {
-                        //비디오 시작
-                        vv.start();
+                        vrscreen.start();
                     }
                 });
             }
         });
 
         openBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Uri videoUri = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.open);
-                //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-//        vv.setMediaController(new MediaController(this));
 
-                //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
-                vv.setVideoURI(videoUri);
+                vrscreen.setVideoURI(videoUri);
 
-                //동영상을 읽어오는데 시간이 걸리므로..
-                //비디오 로딩 준비가 끝났을 때 실행하도록..
-                //리스너 설정
-                vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                vrscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mediaPlayer) {
-                        //비디오 시작
-                        vv.start();
+                        vrscreen.start();
                     }
                 });
             }
         });
 
-//        //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
-////        vv.setMediaController(new MediaController(this));
-//
-//        //VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기
-//        vv.setVideoURI(videoUri);
-//
-//        //동영상을 읽어오는데 시간이 걸리므로..
-//        //비디오 로딩 준비가 끝났을 때 실행하도록..
-//        //리스너 설정
-//        vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-//            @Override
-//            public void onPrepared(MediaPlayer mediaPlayer) {
-//                //비디오 시작
-//                vv.start();
-//            }
-//        });
-
-    }//onCreate ..
-
-    //화면에 안보일때...
+    }
+    //화면에 안보일때
     @Override
     protected void onPause() {
         super.onPause();
 
         //비디오 일시 정지
-        if(vv!=null && vv.isPlaying()) vv.pause();
+        if(vrscreen!=null && vrscreen.isPlaying()) vrscreen.pause();
     }
-    //액티비티가 메모리에서 사라질때..
+    //액티비티가 메모리에서 사라질때
     @Override
     protected void onDestroy() {
         super.onDestroy();
         //
-        if(vv!=null) vv.stopPlayback();
+        if(vrscreen!=null) vrscreen.stopPlayback();
 
     }
 }
