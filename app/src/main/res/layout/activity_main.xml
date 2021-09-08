@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    ....
     //첫 번째 열
     <LinearLayout
         android:layout_width="345dp"
