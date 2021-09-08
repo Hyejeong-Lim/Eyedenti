@@ -8,10 +8,13 @@ import android.media.Image;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     ImageButton aneBtn;
     ImageButton handBtn;
     ImageButton sucBtn;
+    ImageView imageView;
+    boolean i = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
+
                Uri videoUri = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.close);
                 //비디오뷰의 재생, 일시정지 등을 할 수 있는 '컨트롤바'를 붙여주는 작업
 //        vv.setMediaController(new MediaController(this));
@@ -64,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
                         vv.start();
                     }
                 });
+                closeBtn.setImageResource(R.drawable.close_c);
             }
+
         });
 
         sucBtn.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +97,17 @@ public class MainActivity extends AppCompatActivity {
                         vv.start();
                     }
                 });
+                sucBtn.setImageResource(R.drawable.suction_c);
+                new Handler().postDelayed(new Runnable()
+                {
+                    @Override
+
+                    public void run()
+                    {
+                        sucBtn.setImageResource(R.drawable.suction);
+                    }
+                }, 1500);// 딜레이 시간 설정. (1초 = 1000)
+
             }
         });
 
