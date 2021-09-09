@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 closeBtn.setImageResource(R.drawable.close_c);
+                sucBtn.setImageResource(R.drawable.suction);
+                handBtn.setImageResource(R.drawable.handpiece);
+                openBtn.setImageResource(R.drawable.open);
+                aneBtn.setImageResource(R.drawable.anesthesia);
             }
 
         });
@@ -79,16 +83,11 @@ public class MainActivity extends AppCompatActivity {
                         vrscreen.start();
                     }
                 });
+                closeBtn.setImageResource(R.drawable.close);
                 sucBtn.setImageResource(R.drawable.suction_c);
-                new Handler().postDelayed(new Runnable()
-                {
-                    @Override
-
-                    public void run()
-                    {
-                        sucBtn.setImageResource(R.drawable.suction);
-                    }
-                }, 1500);  // 딜레이 시간 설정 (1초 = 1000)
+                handBtn.setImageResource(R.drawable.handpiece);
+                openBtn.setImageResource(R.drawable.open);
+                aneBtn.setImageResource(R.drawable.anesthesia);
 
             }
         });
@@ -108,6 +107,11 @@ public class MainActivity extends AppCompatActivity {
                         vrscreen.start();
                     }
                 });
+                closeBtn.setImageResource(R.drawable.close);
+                sucBtn.setImageResource(R.drawable.suction);
+                handBtn.setImageResource(R.drawable.handpiece);
+                openBtn.setImageResource(R.drawable.open);
+                aneBtn.setImageResource(R.drawable.anesthesia_c);
             }
         });
 
@@ -124,6 +128,11 @@ public class MainActivity extends AppCompatActivity {
                         vrscreen.start();
                     }
                 });
+                closeBtn.setImageResource(R.drawable.close);
+                sucBtn.setImageResource(R.drawable.suction);
+                handBtn.setImageResource(R.drawable.handpiece_c);
+                openBtn.setImageResource(R.drawable.open);
+                aneBtn.setImageResource(R.drawable.anesthesia);
             }
         });
 
@@ -140,6 +149,11 @@ public class MainActivity extends AppCompatActivity {
                         vrscreen.start();
                     }
                 });
+                closeBtn.setImageResource(R.drawable.close);
+                sucBtn.setImageResource(R.drawable.suction);
+                handBtn.setImageResource(R.drawable.handpiece);
+                openBtn.setImageResource(R.drawable.open_c);
+                aneBtn.setImageResource(R.drawable.anesthesia);
             }
         });
 
