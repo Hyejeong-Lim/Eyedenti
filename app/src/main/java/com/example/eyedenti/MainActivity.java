@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton sucBtn;
     ImageView imageView;
     ImageButton voiceBtn;
+    ImageButton xBtn;
     EditText edit;
     Button sttBtn;
     String str;
@@ -73,13 +74,17 @@ public class MainActivity extends AppCompatActivity {
         sucBtn = (ImageButton)findViewById(R.id.suction);
         vrscreen = (VideoView) findViewById(R.id.vrscreen);
         voiceBtn = (ImageButton)findViewById(R.id.voice);
+        xBtn = (ImageButton) findViewById(R.id.x);
 
-
+        xBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseReference.child("video").setValue("none");
+            }
+        });
 
         voiceBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
-
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
