@@ -22,9 +22,8 @@
         <VideoView
             android:id="@+id/vrscreen"
             android:layout_width="match_parent"
-            android:layout_height="400px"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_height="140.75dp"
+            android:layout_marginBottom="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"

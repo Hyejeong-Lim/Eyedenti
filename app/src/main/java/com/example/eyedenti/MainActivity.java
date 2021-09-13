@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                Uri videoUri = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.close);
 
-                /* VideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기 */
+                /* VzideoView가 보여줄 동영상의 경로 주소(Uri) 설정하기 */
                 vrscreen.setVideoURI(videoUri);
 
                 /*비디오 로딩 준비가 끝났을 때 실행하도록 리스너 설정 */
