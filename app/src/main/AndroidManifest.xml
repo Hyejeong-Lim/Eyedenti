@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Eyedenti">
         <activity
-            android:name=".RecordActivity"
+            android:name=".MainActivity"
             android:screenOrientation="landscape"
 
             android:exported="true">
