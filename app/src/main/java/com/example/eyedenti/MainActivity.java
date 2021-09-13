@@ -80,6 +80,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 databaseReference.child("video").setValue("none");
+
+                vrscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mediaPlayer) {
+                        vrscreen.start();
+                    }
+                });
+                closeBtn.setImageResource(R.drawable.close);
+                sucBtn.setImageResource(R.drawable.suction);
+                handBtn.setImageResource(R.drawable.handpiece);
+                openBtn.setImageResource(R.drawable.open);
+                aneBtn.setImageResource(R.drawable.anesthesia);
+
             }
         });
 
