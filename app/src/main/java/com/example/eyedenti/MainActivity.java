@@ -80,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 databaseReference.child("video").setValue("none");
+                databaseReference.child("message").setValue("none");
+
+                moveTaskToBack(true);						// 태스크를 백그라운드로 이동
+                finishAndRemoveTask();						// 액티비티 종료 + 태스크 리스트에서 지우기
+                android.os.Process.killProcess(android.os.Process.myPid());	// 앱 프로세스 종료
 
                 vrscreen.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
